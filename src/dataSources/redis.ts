@@ -28,9 +28,6 @@ class RedisWrapper {
 
   public async run() {
     this.client.on('connect', () => {
-      logger.info(
-        `Connected to Redis at ${config.app_url} - {${config.client_url}}`
-      )
       logger.info('Connected to Redis')
     })
 

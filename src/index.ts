@@ -4,7 +4,6 @@ import express, { Express } from 'express'
 
 import { config } from '@/config/config'
 import { mongoose, redis } from '@/dataSources'
-import { i18next, i18nextHttpMiddleware } from '@/i18n'
 import '@/infrastructure/logger'
 import {
   authMiddleware,
@@ -26,7 +25,6 @@ app.use(
   express.json({ limit: '10mb' }),
   express.urlencoded({ limit: '10mb', extended: true }),
   corsMiddleware,
-  i18nextHttpMiddleware.handle(i18next),
   authMiddleware,
   router,
   errorConverter,
