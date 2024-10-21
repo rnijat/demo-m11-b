@@ -1,0 +1,5 @@
+export { orderValidator } from './order.validate'
+export { paymentValidator } from './payment.validate'
+export { productValidator } from './product.validate'
+export { transferValidator } from './transfer.validate'
+export { userValidator } from './user.validate'
